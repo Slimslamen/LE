@@ -9,7 +9,7 @@ const About = () => {
   const { textsMap } = useSupabase();
 
   return (
-    <section id="about" className="py-20 bg-white" aria-label="Om Lavin Elektriska">
+    <section id="about" className="py-52 bg-slate-100" aria-label="Om Lavin Elektriska">
       <div className="container mx-auto px-4">
         <div className="md:grid lg:grid-cols-3  md:gap-12 lg:gap-24 items-center md:items-start">
           <Reveal direction="left" className="aboutText w-full max-w-xl mx-auto lg:mx-0 text-center lg:text-left">

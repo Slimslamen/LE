@@ -95,7 +95,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-50" id="FAQ" aria-label="Vanliga frågor">
+    <section className="py-52 bg-slate-100" id="FAQ" aria-label="Vanliga frågor">
       <div className="container mx-auto px-4">
         <div className="HeadContainer text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">

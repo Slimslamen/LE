@@ -13,7 +13,7 @@ const CTA = () => {
   return (
     <section
       id="CTA"
-      className="py-20 bg-linear-to-r from-[#66BEF0] to-[#4A90E2] relative overflow-hidden"
+      className="py-52 bg-linear-to-r from-[#66BEF0] to-[#4A90E2] relative overflow-hidden"
       aria-label="Call to Action"
     >
       <div className="absolute inset-0 bg-linear-to-br from-blue-600/20 to-purple-600/20" aria-hidden="true" />

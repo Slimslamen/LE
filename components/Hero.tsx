@@ -10,6 +10,10 @@ const Hero = () => {
   const { textsMap, imagesMap } = useSupabase();
 
   const heroBg = imagesMap?.hero_background ?? "";
+
+  const heroSubtitle1 = textsMap?.hero_p1 ?? "Sedan starten har vi jobbat på att bygga erfarenhet och kunskap inom el-branschen för att kunna erbjuda våra kunder bästa möjliga service och kvalitet."
+  const heroSubtitle2 = textsMap?.hero_p2 ?? "Vi gör mer än att dra kablar. Vi förverkligar dina idéer och skapar lösningar som får ditt hem eller projekt att fungera precis som du vill. Hos oss får du en elpartner som ser helheten, bryr sig om detaljerna och alltid arbetar för en lösning som passar just dina behov."
+
   return (
     <section id="home" className="relative min-h-screen overflow-hidden" aria-label="Startsida hero">
       {/* Responsive background image without LQIP */}
@@ -17,6 +21,15 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full max-w-full bg-linear-to-br from-slate-900 via-slate-800 to-[#66BEF0]"
         aria-hidden="true"
       >
+        {/* Fallback placeholder while storage image loads */}
+        <Image
+          src="/Images/plejdHero.webp"
+          alt="hero placeholder"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <EditableImage
           imageKey="hero_background"
           value={heroBg}
@@ -54,10 +67,10 @@ const Hero = () => {
             </h1>
             <div className="space-y-6 mb-8 text-lg">
               <p className="text-gray-200 leading-relaxed">
-                <EditableText textKey="hero_p1" value={textsMap?.hero_p1} fallback="Text laddar..." width="35rem" />
+                <EditableText textKey="hero_p1" value={heroSubtitle1} fallback="Text laddar..." width="35rem" />
               </p>
               <p className="text-gray-300 leading-relaxed">
-                <EditableText textKey="hero_p2" value={textsMap?.hero_p2} fallback="Text laddar..." width="35rem" />
+                <EditableText textKey="hero_p2" value={heroSubtitle2} fallback="Text laddar..." width="35rem" />
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 mb-8">

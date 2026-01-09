@@ -19,7 +19,7 @@ const Header = () => {
     e.preventDefault();
     const element: HTMLElement | null = document.getElementById(id);
     if (element) {
-      const y: number = element.getBoundingClientRect().top + window.pageYOffset - 60; // 60px offset
+      const y: number = element.getBoundingClientRect().top + window.pageYOffset - -80; // 60px offset
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   };

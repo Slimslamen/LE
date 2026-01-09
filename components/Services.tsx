@@ -74,7 +74,7 @@ const Services = () => {
   };
 
   return (
-    <div id="services" className="min-h-screen bg-linear-to-br from-slate-50 to-slate-100 flex items-center justify-center px-5 sm:px-0 pt-8 pb-40">
+    <div id="services" className="min-h-screen bg-slate-100 flex items-center justify-center px-5 sm:px-0 py-40">
       <div className="max-w-6xl w-full">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -107,7 +107,7 @@ const Services = () => {
               aria-disabled={!isMobile}
               className={`group relative h-96 md:w-[65vh] 2xl:w-[45vh] rounded-2xl overflow-hidden cursor-pointer md:cursor-default shadow-lg transition-all duration-500 ease-out
                 ${isMobile && expandedCard === service.id ? "h-160 z-50 md:h-96" : ""}
-                md:hover:w-[120%] md:hover:z-50
+                md:hover:w-[110%] md:hover:z-50
                   `}
             >
               {/* Background Image (Editable for admins) */}
