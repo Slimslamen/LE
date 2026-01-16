@@ -147,7 +147,7 @@ h1 {
   cursor: pointer;
 }
 
-button:not(.edit, .ultimateSave, #CarouselBtn, .ShopClose, .ShopSpecific, .ConfirmationBtn),
+button:not(.hamBtn,.edit, .ultimateSave, #CarouselBtn, .ShopClose, .ShopSpecific, .ConfirmationBtn),
 #sendMessage {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -159,7 +159,7 @@ button:not(.edit, .ultimateSave, #CarouselBtn, .ShopClose, .ShopSpecific, .Confi
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover:not(.ultimateSave, .ShopClose, #sendMessage, .ConfirmationBtn) {
+button:hover:not(.hamBtn,.ultimateSave, .ShopClose, #sendMessage, .ConfirmationBtn) {
   background-color: #22aeff;
 }
 

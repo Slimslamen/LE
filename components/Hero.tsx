@@ -15,29 +15,37 @@ const Hero = () => {
   const heroSubtitle2 = textsMap?.hero_p2 ?? "Vi gör mer än att dra kablar. Vi förverkligar dina idéer och skapar lösningar som får ditt hem eller projekt att fungera precis som du vill. Hos oss får du en elpartner som ser helheten, bryr sig om detaljerna och alltid arbetar för en lösning som passar just dina behov."
 
   return (
+    <div>
     <section id="home" className="relative min-h-screen overflow-hidden" aria-label="Startsida hero">
       {/* Responsive background image without LQIP */}
       <div
         className="absolute inset-0 w-full h-full max-w-full bg-linear-to-br from-slate-900 via-slate-800 to-[#66BEF0]"
         aria-hidden="true"
       >
-        {/* Fallback placeholder while storage image loads */}
+        {/* Fallback placeholder while storage image loads (desktop/tablet only) */}
         <Image
           src="/Images/plejdHero.webp"
           alt="hero placeholder"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="hidden sm:block object-cover object-center"
+        />
+        <Image
+          src="/Images/mobileHeader.webp"
+          alt="hero mobile"
+          fill
+          sizes="100vw"
+          className="sm:hidden object-cover object-center"
+          preload
         />
         <EditableImage
           imageKey="hero_background"
           value={heroBg}
           alt="auto"
           fill
-          priority="eager"
           sizes="45rem"
-          className="object-cover object-center"
+          className="hidden sm:block object-cover object-center"
           editButtonClassName="w-40 absolute right-10"
         />
         <div className="absolute inset-0 bg-linear-to-br from-black/70 via-black/50 to-black/30 pointer-events-none z-0" aria-hidden="true" />
@@ -249,6 +257,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

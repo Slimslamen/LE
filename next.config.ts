@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  compress: true,
   images: {
     // Cache optimized images for 1 hour
     minimumCacheTTL: 60 * 60,
