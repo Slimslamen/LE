@@ -99,7 +99,7 @@ const Carousel = () => {
 
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 md:-translate-x-2 translate-x-8 z-10 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-200 hover:scale-95 w-10 md:h-10 h-96"
+            className="absolute right-[-16px] top-1/2 -translate-y-1/2 md:-translate-x-2 translate-x-8 z-10 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-200 hover:scale-95 w-10 md:h-10 h-96"
             aria-label="Next images"
           >
             <Image
